@@ -63,7 +63,7 @@ python pymodule_frequency.py \
 --runner=DataflowRunner [OPTIONAL: Defaults to DataFlowRunner] \
 ```
 ## Results and learnings
-Dataflow proccessed x GB of data and took just under 8 minutes to complete.
+Dataflow proccessed 2.5 TB of data and took just under 8 minutes to complete.
 
 At the time of running, these are the top 5 most frequently imported python modules on Github.
 
