@@ -66,7 +66,7 @@ def run(known_args, pipeline_args):
 
    (p
       
-      | 'GetDataFromBQ' >> beam.io.Read(beam.io.BigQuerySource(query=query_testing, use_standard_sql=True))
+      | 'GetDataFromBQ' >> beam.io.Read(beam.io.BigQuerySource(query=query, use_standard_sql=True))
       | 'GetImportLines' >> beam.FlatMap(lambda line: get_imports(line['content']))
       | 'CleanImportLines' >> beam.FlatMap(lambda line: clean_import_lines(line))
       | 'CountFrequency' >> beam.combiners.Count.PerKey()
